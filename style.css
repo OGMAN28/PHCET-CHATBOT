@@ -1,0 +1,113 @@
+/* Add this CSS to your style.css file */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+.chatbot-toggler {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chatbot {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 380px; /* Increased width */
+    /* height: 500px; Increased height */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    /* padding: 5px; Increased padding */
+}
+
+
+.chatbot.open {
+    display: block;
+}
+
+.chatbot header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chatbot h2 {
+    margin: 0;
+}
+
+.close-btn {
+    cursor: pointer;
+}
+
+.chatbox {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 250px; /* Limit the height to prevent overflow */
+    overflow-y: auto; /* Enable vertical scroll if needed */
+    overflow-x: hidden; /* Hide horizontal scroll */
+    /* width: calc(100% - 20px); Adjusted width */
+}
+
+
+.chatbox li {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    word-wrap: break-word; /* Wrap long words */
+    overflow-wrap: break-word; /* Wrap long words */
+}
+
+.chatbox .incoming {
+    justify-content: flex-start;
+    width: calc(100% - 20px);
+}
+
+.chatbox .outgoing {
+    justify-content: flex-end;
+}
+
+.material-symbols-outlined,
+.material-symbols-rounded {
+    font-family: 'Material Symbols Outlined', sans-serif;
+}
+
+.chat-input {
+    display: flex;
+    padding: 10px;
+}
+
+.chat-input textarea {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: none;
+}
+
+.chat-input #send-btn {
+    margin-left: 10px;
+    cursor: pointer;
+    color: #007bff;
+}
